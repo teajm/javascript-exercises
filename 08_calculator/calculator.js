@@ -7,28 +7,28 @@ const subtract = function(a,b) {
 };
 
 const sum = function(array) {
-	return array.reduce((partialSum, a) => partialSum + a, 0);
+  return array.reduce((sum, currentVal) => sum + currentVal, 0);
 };
 
 const multiply = function(array) {
-  return array.length
-    ? array.reduce((partialSum, a) => partialSum * a)
-    :0;
+  return array.reduce((sum, currentVal) => sum * currentVal);
 };
 
 const power = function(a,b) {
-	return Math.pow(a,b);
+  return Math.pow(a,b);
 };
 
 const factorial = function(n) {
-	if(n ===0) return 1;
-  let product = 1;
-
-    for(let i = n; i > 0; i--){
-      product = product * i;
+  if (n == 0){
+    return 1;
+  }
+  else{
+    let total = 1;
+    for( let i = n; i > 0; i--){
+      total *=i;
     }
-  
-  return product;
+    return total;
+  }
 };
 
 // Do not edit below this line
